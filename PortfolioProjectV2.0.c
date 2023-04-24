@@ -201,7 +201,8 @@ void ChangeRating(char names[][20], int ratings[], int length){
 //Asks the user for a location name and rating, then adds it to the end of the list.
 void AddLocation(char names[][20], int ratings[], int length){
 	printf("Enter the name of the dining location you want to add: \n");
-	scanf(" %s", names[length]);
+	//Scans strings with spaces
+	scanf(" %[^\n]s", names[length]);
 	printf("\n");
 	RatingContext();
 	printf("Based on the criteria, enter the rating of your dining location: \n");
